@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    min-height: 100vh;
+    min-width: 100vw;
     background-image: url(cool-background.png);
     font-family: 'Piazzolla', serif;
 }
@@ -17,16 +17,27 @@ h1 {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: .5rem;
 }
 
 .image-card {
     justify-self: center;
     align-self: center;
+    display: flex;
+    column-gap: .5rem;
+    padding: 0;
+    opacity: 0.7;
+    transition: all .3s;
 }
 
 .image-card img {
-    width: 350px;
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    box-shadow: 3px 3px grey;
+}
 
+.image-card:hover {
+    opacity: 1;
 }
